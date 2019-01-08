@@ -266,7 +266,7 @@
 			"location": "[resourceGroup().location]",
 			"apiVersion": "2018-06-01",
 			"tags": {
-				"displayName": "InstallBastionHost",
+				"displayName": "InstallBastionHost"
 			},
             "dependsOn": [
                 "[concat('Microsoft.Network/networkInterfaces/', parameters('virtualMachineName'))]"
