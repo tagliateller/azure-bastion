@@ -282,7 +282,7 @@
 					]
 				},
 				"protectedSettings": {
-					"commandToExecute": "[concat('bash ', parameters('installScriptFileName'))]"
+					"commandToExecute": "[concat('bash ', variables('installScriptFileName'))]"
 				}
 			}
 		}       
