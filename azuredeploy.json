@@ -269,7 +269,7 @@
 				"displayName": "InstallBastionHost"
 			},
             "dependsOn": [
-                "[concat('Microsoft.Network/networkInterfaces/', parameters('virtualMachineName'))]"
+                "[concat('Microsoft.Network/virtualMachines/', parameters('virtualMachineName'))]"
             ],
 			"properties": {
 				"publisher": "Microsoft.Azure.Extensions",
