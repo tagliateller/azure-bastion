@@ -261,29 +261,31 @@
             "tags": {}
         },
         {
-		"type": "Microsoft.Compute/virtualMachines/extensions",
-		"name": "[concat(parameters('virtualMachineName'), '/installBastionHost')]",
-		"location": "[resourceGroup().location]",
-		"apiVersion": "2018-06-01",
-		"tags": {
-			"displayName": "InstallBastionHost",
-		},
-		"properties": {
-			"publisher": "Microsoft.Azure.Extensions",
-			"type": "CustomScript",
-			"typeHandlerVersion": "2.0",
-			"autoUpgradeMinorVersion": true,
-			"settings": {
-				"fileUris": [
-					"[variables('installScriptUrl')]"
-				]
+			"type": "Microsoft.Compute/virtualMachines/extensions",
+			"name": "[concat(parameters('virtualMachineName'), '/installBastionHost')]",
+			"location": "[resourceGroup().location]",
+			"apiVersion": "2018-06-01",
+			"tags": {
+				"displayName": "InstallBastionHost",
 			},
-			"protectedSettings": {
-				"commandToExecute": "[concat('bash ', parameters('installScriptFileName'))]"
+            "dependsOn": [
+                "[concat('Microsoft.Network/networkInterfaces/', parameters('virtualMachineName'))]"
+            ],
+			"properties": {
+				"publisher": "Microsoft.Azure.Extensions",
+				"type": "CustomScript",
+				"typeHandlerVersion": "2.0",
+				"autoUpgradeMinorVersion": true,
+				"settings": {
+					"fileUris": [
+						"[variables('installScriptUrl')]"
+					]
+				},
+				"protectedSettings": {
+					"commandToExecute": "[concat('bash ', parameters('installScriptFileName'))]"
+				}
 			}
-		}
-}
-        
+		}       
     ],
     "outputs": {
         "adminUsername": {
