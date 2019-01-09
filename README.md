@@ -17,3 +17,7 @@ vi azuredeploy.parameters.json
         "sshPublicKey": {
             "value": "ssh-rsa AA...ZZ vagrant@localhost.localdomain"
         },
+
+# AWS 
+
+https://github.com/openshift/openshift-ansible/tree/release-3.11/playbooks/aws

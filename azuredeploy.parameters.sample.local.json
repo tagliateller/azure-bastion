@@ -115,6 +115,15 @@
         },
         "diagnosticsStorageAccountKind": {
             "value": "Storage"
-        }
+        },
+		"awsUserName": {			
+			"value": "tochange"
+		},
+		"awsAccessKeyId": {
+			"value": "tochange"
+		},
+		"awsSecretAccessKey": {
+			"value": "tochange"
+		}
     }
 }
