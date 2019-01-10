@@ -21,7 +21,7 @@ python get-pip.py
 echo $(date) " - Install Ansible"
 
 pip install ansible
-pip install boto
+pip install boto3
 
 echo $(date) " - Checkout Git Repo"
 
