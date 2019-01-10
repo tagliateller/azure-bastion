@@ -41,10 +41,11 @@ git checkout release-3.11
 
 echo $(date) " - Create AWS Credentials"
 
+mkdir -p ~/.aws/
 cat > ~/.aws/credentials <<EOF
-#[myaccount]
-#aws_access_key_id = ${AWSACCESSKEYID}
-#aws_secret_access_key = ${AWSSECRETACCESSKEY}
+[myaccount]
+aws_access_key_id = ${AWSACCESSKEYID}
+aws_secret_access_key = ${AWSSECRETACCESSKEY}
 EOF
  
 echo $(date) " - Script Complete"
