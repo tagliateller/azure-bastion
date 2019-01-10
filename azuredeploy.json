@@ -94,7 +94,8 @@
         "vnetId": "[resourceId(resourceGroup().name,'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]",
 		"installScriptUrl": "[concat(parameters('_artifactsLocation'), '/scripts/install.sh')]",
-		"installScriptFileName": "install.sh"
+		"installScriptFileName": "install.sh",
+	    "singlequote": "'"
     },
     "resources": [
         {
